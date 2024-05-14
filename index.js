@@ -1,2 +1,10 @@
-const currentDate = new Date();
-console.log(currentDate); // Fri 2024-04-05T09:17:00.000Z
+function findTheDifference(s, t) {
+  let result = 0;
+  for (const char of s) {
+    result ^= char.charCodeAt(0);
+  }
+  for (const char of t) {
+    result ^= char.charCodeAt(0);
+  }
+  return String.fromCharCode(result);
+}
